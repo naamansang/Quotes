@@ -3,7 +3,7 @@ This project was generated with Angular CLI version 11.1.2.
 
 Technologies Used **html **css **Typescript **bootstrap
 
-**Licence:
+**Licence:https://github.com/naamansang/Quotes/blob/main/LICENCE
 **Live-Link:https://naamansang.github.io/Quotes/
 
 Development server
