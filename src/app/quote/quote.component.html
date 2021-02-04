@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Quotes</h1>
+      <ul>
+        <div *ngFor='let quote of quotes let i = index' >
+         <li appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0" >{{quote.quote}}</li>
+          <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.quote}}</p>
+           <app-quote-detail  [quote]='quote'(toDelete) = 'deleteQuote($event,i)'></app-quote-detail>
+           <i class="fa fa-thumbs-up"(click)="upvote(i)" aria-hidden="true"></i>
+           <i class="fa fa-thumbs-down"(click)= "downvote(i)"aria-hidden="true"></i>
+         </div>
+       </ul>
+      </div>
+    <div class="col-md-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+    </div>
+    </div>
